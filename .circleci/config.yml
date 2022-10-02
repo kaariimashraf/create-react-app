@@ -4,8 +4,6 @@ version: 2.1
 
 jobs:
   build:
-    machine:
-      enabled: true
     docker:
       - image: circleci/node:17.2.0
     steps:
@@ -29,7 +27,7 @@ jobs:
       - run:
           name: 'copy build'
           command: |
-            scp -r  ./build ec2-user@18.207.216.177:~
+            scp  -i ~/.ssh/id_remote ./build ec2-user@18.207.216.177:~
 
 workflows:
   say-hello-workflow:
