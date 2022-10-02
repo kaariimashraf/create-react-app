@@ -13,9 +13,7 @@ jobs:
           command: |
             pwd
             sudo apt install npm
-            cd /home/circleci/project
-            pwd
-            npm install
+            ls
       - run:
           name: 'build'
           command: |
