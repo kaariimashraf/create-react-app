@@ -27,6 +27,8 @@ jobs:
       - run:
           name: 'copy build'
           command: |
+            cd ~/.ssh
+            ls -l
             scp  -i ~/.ssh/id_remote ./build ec2-user@18.207.216.177:~
 
 workflows:
