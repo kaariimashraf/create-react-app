@@ -8,12 +8,13 @@ jobs:
       - image: circleci/node:14.1.0
     steps:
       - checkout
-      # - run:
-      #     name: 'install npm'
-      #     command: |
-      #       pwd
-      #       sudo apt install npm
-      #       ls
+      - run:
+          name: 'install dependencis'
+          command: |
+
+            sudo apt-get update
+            sudo apt-get install git
+
       - run:
           name: 'build'
           command: |
