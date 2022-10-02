@@ -23,7 +23,7 @@ jobs:
             echo "-----------------This is working directory"
             npm install
             npm run build
-            ls
+            ls -l
       - run:
           name: 'copy build'
           command: |
