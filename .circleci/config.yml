@@ -4,10 +4,10 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:17.2.0
     machine:
       enabled: true
+    docker:
+      - image: circleci/node:17.2.0
     steps:
       - checkout
       - add_ssh_keys:
