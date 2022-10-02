@@ -8,10 +8,11 @@ jobs:
       - image: circleci/node:17.2.0
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints: [db:62:01:1d:7a:5a:e7:ab:1a:42:be:e9:9a:b5:4f:f0]
       - run:
           name: 'install dependencis'
           command: |
-
             sudo apt-get update
             sudo apt-get install git
 
@@ -23,6 +24,10 @@ jobs:
             npm install
             npm run build
             ls
+      - run:
+          name: 'copy build'
+          command: |
+            scp -r  ./build ec2-user@18.207.216.177:/
 
 workflows:
   say-hello-workflow:
