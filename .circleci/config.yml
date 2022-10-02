@@ -16,8 +16,10 @@ jobs:
       - run:
           name: 'build'
           command: |
-            npm run build
             pwd
+            echo "-----------------This is working directory"
+            npm run build
+            ls
 
 workflows:
   say-hello-workflow:
