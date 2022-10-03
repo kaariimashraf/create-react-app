@@ -29,8 +29,7 @@ jobs:
           command: |
             cd ~/.ssh
             ls -l
-            cat ~/.ssh/id_rsa_db62011d7a5ae7ab1a42bee99ab54ff0
-            scp  -i ~/.ssh/id_rsa_db62011d7a5ae7ab1a42bee99ab54ff0 ./build ec2-user@18.207.216.177:~
+            scp  -i ~/.ssh/id_rsa_db62011d7a5ae7ab1a42bee99ab54ff0 ./build ec2-user@52.90.112.129:~
 
 workflows:
   say-hello-workflow:
